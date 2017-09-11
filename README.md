@@ -1,4 +1,4 @@
-
+![alt text](capital-readme.png "US Capitol Building")
 
 * Code Style:
 
