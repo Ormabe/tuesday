@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import DatePicker from 'material-ui/DatePicker';
-import { teal800, grey800 } from 'material-ui/styles/colors';
+import { green800, grey800 } from 'material-ui/styles/colors';
 
 
 const InputDate = ({ value, onChange }) => (

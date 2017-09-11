@@ -1,16 +1,6 @@
 'use strict';
 module.exports = function(sequelize, DataTypes) {
   var Volunteers = sequelize.define('Volunteers', {
-    ny13DVoterId: {
-      type: DataTypes.INTEGER,
-      field: 'ny13D_voter_id',
-      references: {
-        model: 'NY13DVoters',
-        key: 'id'
-      },
-      onUpdate: 'cascade',
-      onDelete: 'cascade'
-    },
     fullName: {
       type: DataTypes.VIRTUAL,
       set: function (value) {
@@ -74,7 +64,7 @@ module.exports = function(sequelize, DataTypes) {
   }, {
     classMethods: {
       associate: function(models) {
-        // associations can be defined here
+        models.Volunteers.belongsTo(models.NY13DVoters)
       }
     }
   });

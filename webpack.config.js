@@ -4,6 +4,7 @@ const webpack = require('webpack');
 process.noDeprecation = true;
 
 module.exports = {
+    target: 'node',
     watch: true,
     cache: true,
     context: __dirname,
@@ -50,9 +51,9 @@ module.exports = {
                     {
                         loader: "postcss-loader",
                         options: {
-                            plugins: (loader) => [
-                              require('postcss-smart-import'),
-                              require('autoprefixer'),
+                            plugins: [
+                                require('postcss-smart-import'),
+                                require('autoprefixer')
                             ]
                           }
                     },
@@ -73,6 +74,9 @@ module.exports = {
         ]
     },
     plugins: [
-        new webpack.optimize.ModuleConcatenationPlugin()
+        new webpack.optimize.ModuleConcatenationPlugin(),
+        new webpack.DefinePlugin({
+            'process.env.NODE_ENV': JSON.stringify('development')
+        })
     ]
 }

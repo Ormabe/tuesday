@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
-
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
 html, body {
-    background-color: #DCDCDC;
+    background-color: #F5F5F5;
     font-family: 'Roboto', sans-serif;
     text-align: 'center';
     height:100%;
@@ -11,3 +11,6 @@ html, body {
     padding:20px;
 }
 
+.title {
+    font-family: 'Permanent Marker', cursive;
+}

@@ -1,8 +1,8 @@
 import React from 'react';
 import TextField from 'material-ui/TextField';
-import { teal800, grey800 } from 'material-ui/styles/colors';
+import { green800, grey800 } from 'material-ui/styles/colors';
 
-const InputField = ({ name, label, value, onChange, type, required }) => {
+const InputField = ({ name, label, value, onChange, type, required, max }) => {
     const { floatingLabelFocusStyle, floatingLabelStyle, underlineStyle } = styles;
 
     return(
@@ -10,6 +10,7 @@ const InputField = ({ name, label, value, onChange, type, required }) => {
             name={name}
             type={type}
             value={value}
+            maxLength={max}
             required={required}
             onChange={onChange}
             floatingLabelText={label}
@@ -28,7 +29,7 @@ const styles = {
         color: grey800,
     },
     floatingLabelFocusStyle: {
-        color: teal800,
+        color: green800,
     }
   };
 

@@ -64,4 +64,33 @@ router.route('/volunteers')
 	});
 
 
+router.route('/match')
+    .post((req, res) => {
+	return NY13DVoters.findOrCreate({
+		where: [{
+			$iLike: [{
+				name: req.body.lastName
+			}]
+		}],
+		defaults: {
+			lastName: req.body.lastName,
+			age: req.body.age,
+			phone: req.body.phone,
+			district: req.body.district,
+			location: req.body.location
+		}
+	})
+	.then((contact) => {
+		console.log('CONTACT:',contact)
+		
+	})
+	.then((data) => {
+		res.send(data)
+	})
+	.catch((err) => {
+		console.log(err);
+	})
+})
+
+
 module.exports = router;

@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import TextField from 'material-ui/TextField';
-import { teal800, grey800 } from 'material-ui/styles/colors';
+import { green800, grey800 } from 'material-ui/styles/colors';
 import InputMask from 'react-input-mask';
 
 class InputPhone extends Component {
@@ -36,7 +36,7 @@ const styles = {
         color: grey800,
     },
     floatingLabelFocusStyle: {
-        color: teal800,
+        color: green800,
     }
   };
 
