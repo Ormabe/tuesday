@@ -26,7 +26,7 @@ const App = () => (
         <Card style={styles}>
             <CardHeader>
                 <Image />
-                <div rel="preconnect" className="karenFont">Karen Candidate cares for District 13.</div>
+                <div rel="preconnect" className="karenFont">Karen Smith-Smyth cares about Highland Park</div>
             </CardHeader>
             <VolunteerForm />
         </Card>
