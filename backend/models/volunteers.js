@@ -64,7 +64,7 @@ module.exports = function(sequelize, DataTypes) {
   }, {
     classMethods: {
       associate: function(models) {
-        models.Volunteers.belongsTo(models.NY13DVoters)
+        Volunteers.belongsTo(models.NY13DVoters)
       }
     }
   });

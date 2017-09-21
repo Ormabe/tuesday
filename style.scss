@@ -1,16 +1,24 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
-@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
-html, body {
+@import url('https://fonts.googleapis.com/css?family=Kavivanar');
+@import url('https://fonts.googleapis.com/css?family=Marck+Script');
+
+body {
     background-color: #F5F5F5;
     font-family: 'Roboto', sans-serif;
-    text-align: 'center';
     height:100%;
-    width:100%;
+    width:100vw;
     border:0px;
     margin:0;
     padding:20px;
 }
 
 .title {
-    font-family: 'Permanent Marker', cursive;
+    font-family: 'Kavivanar', cursive;
+}
+
+.karenFont {
+    font-family: 'Marck Script', cursive;
+    font-size: 3em;
+    padding-top: 5px;
+    color: #19171A;
 }

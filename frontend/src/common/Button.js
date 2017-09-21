@@ -1,8 +1,10 @@
 import React from 'react';
 import RaisedButton from 'material-ui/RaisedButton';
+import { Card, CardActions } from 'material-ui/Card';
 
 const Button = ({ label, textColor, bgColor, type }) => {
     return (
+
         <RaisedButton
             type={type}
             label={label}
