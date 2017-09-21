@@ -1,9 +1,9 @@
 import React from 'react';
 import TextField from 'material-ui/TextField';
-import { green800, grey800 } from 'material-ui/styles/colors';
+import { green800, grey800, orange800 } from 'material-ui/styles/colors';
 
-const InputEmail = ({ name, label, value, onChange }) => {
-    const { floatingLabelFocusStyle, floatingLabelStyle, underlineStyle } = styles;
+const InputEmail = ({ name, label, value, onChange, errorText }) => {
+    const { floatingLabelFocusStyle, floatingLabelStyle, underlineStyle, errorStyle } = styles;
 
     return(
             <TextField
@@ -11,6 +11,8 @@ const InputEmail = ({ name, label, value, onChange }) => {
                 type="email"
                 value={value}
                 onChange={onChange}
+                errorText={errorText}
+                errorStyle={errorStyle}
                 floatingLabelText={label}
                 underlineStyle={underlineStyle}
                 floatingLabelStyle={floatingLabelStyle}
@@ -28,6 +30,9 @@ const styles = {
     },
     floatingLabelFocusStyle: {
         color: green800,
+    },
+    errorStyle: {
+        color: orange800
     }
   };
 
